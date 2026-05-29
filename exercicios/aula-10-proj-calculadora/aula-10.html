@@ -7,49 +7,68 @@
     <link rel="stylesheet" href="aula-10.css">
 </head>
 <body>
-
-    <script src="ex-aula-10.js"></script>
+    <h1 class="title">CALCULADORA</h1>
     <form id="calculadora" class="calculadora">
-        <input type="text" class="visor" id="visor" disabled>
+
+    <input type="text" class="visor" id="visor" readonly>
+
         <div class="buttons">
+
             <div class="numerical">
+
                 <div class="numbers">
-                    <button type="button" class="btn" data-value="1">1</button>
-                    <button type="button" class="btn" data-value="2">2</button>
-                    <button type="button" class="btn" data-value="3">3</button>
+                    <button type="button" class="btn" onclick="adicionarAoVisor('1')">1</button>
+                    <button type="button" class="btn" onclick="adicionarAoVisor('2')">2</button>
+                    <button type="button" class="btn" onclick="adicionarAoVisor('3')">3</button>
                 </div>
 
                 <div class="numbers">
-                    <button type="button" class="btn" data-value="4">4</button>
-                    <button type="button" class="btn" data-value="5">5</button>
-                    <button type="button" class="btn" data-value="6">6</button>
+                    <button type="button" class="btn" onclick="adicionarAoVisor('4')">4</button>
+                    <button type="button" class="btn" onclick="adicionarAoVisor('5')">5</button>
+                    <button type="button" class="btn" onclick="adicionarAoVisor('6')">6</button>
                 </div>
+
                 <div class="numbers">
-                    <button type="button" class="btn" data-value="7">7</button>
-                    <button type="button" class="btn" data-value="8">8</button>
-                    <button type="button" class="btn" data-value="9">9</button>
+                    <button type="button" class="btn" onclick="adicionarAoVisor('7')">7</button>
+                    <button type="button" class="btn" onclick="adicionarAoVisor('8')">8</button>
+                    <button type="button" class="btn" onclick="adicionarAoVisor('9')">9</button>
+                </div>
+
+                <div class="numbers">
+                    <button type="button" class="btn" onclick="adicionarAoVisor('0')">0</button>
+                </div>
+
+            </div>
+
+            <div class="operation">
+
+                <div class="operators">
+                    <button type="button" class="btn operator" onclick="adicionarAoVisor('+')">+</button>
+                    <button type="button" class="btn operator" onclick="adicionarAoVisor('-')">-</button>
+                    <button type="button" class="btn operator" onclick="adicionarAoVisor('*')">x</button>
+                </div>
+
+                <div class="operators">
+                    <button type="button" class="btn operator" onclick="adicionarAoVisor('/')">/</button>
+                    <button type="button" class="btn operator" onclick="adicionarAoVisor('**')">^</button>
+                    <button type="button" class="btn operator" onclick="calcular()">=</button>
+                </div>
+
+                <div class="operators">
+                    <button type="button" class="btn operator" onclick="adicionarAoVisor('(')">(</button>
+                    <button type="button" class="btn operator" onclick="adicionarAoVisor(')')">)</button>
+                    <button type="button" class="btn operator" onclick="adicionarAoVisor('.')">.</button>
+                </div>
+
+                <div class="operators">
+                    <button type="button" class="btn clear" onclick="limparVisor()">Clear</button>
+                    <button type="button" class="btn clear" onclick="apagarUltimo()">←</button>
                 </div>
             </div>
 
-            
-            <div class = "operation">
-                <div class="operators">
-                    <button type="button" class="btn" data-value="0">0</button>
-                    <button type="button" class="btn operator" data-value="+">+</button>
-                    <button type="button" class="btn operator" data-value="-">-</button>
-
-                </div>
-                <div class="operators">
-                    <button type="button" class="btn operator" data-value="/">/</button>
-                    <button type="button" class="btn operator" data-value="*">*</button>
-                    <button type="button" class="btn operator" data-value="x">x</button>
-                </div>
-                <div class="operators">
-                    <button type="submit" class="btn operator">=</button>
-                    <button type="reset" class="btn clear">Clear</button>
-                </div>
-            </div>
         </div>
+
     </form>
+    <script src="aula-10.js"></script>
 </body>
 </html>
